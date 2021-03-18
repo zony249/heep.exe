@@ -1,0 +1,62 @@
+// All sub-tests were preformed sequentially.
+// for example:
+//      in:     1 1 2 4 5 2 3 7
+//          // you start with these values in heap
+//      push:   0
+//          // you push 0 in
+//      out:    0 1 2 1 5 2 3 7 4
+//          // after you pushed 0, the heap should be
+//          // as shown.
+//      pop, out:   1 1 2 4 5 2 3 7
+//          // you THEN popped the beginning value, and
+//          // the heap should be as shown
+//      
+// These are the ANSWERS for every given input. In other words, 
+// you feed in the input, and at each stage the output should
+// be identical to whats shown below.
+
+
+
+
+// ------------- TEST 1 -- HEAP OPERATIONS ---------------- //
+
+in:         1 1 2 4 5 2 3 7 
+push:       0
+out:        0 1 2 1 5 2 3 7 4   
+pop, out:   1 1 2 4 5 2 3 7     
+result:     (CORRECT)
+
+in:         4 5 6 5 7 6 7 5 8
+push:       5
+out:        4 5 6 5 5 6 7 5 8 7 
+pop, out:   5 5 6 5 7 6 7 5 8  OR  5 5 6 5 5 6 7 7 8 
+result:     (CORRECT)
+
+in:         1 1 2 4 9 2 3 5 6 10 10 3 4 3 3 6 7
+push:       2
+out:        1 1 2 2 9 2 3 5 4 10 10 3 4 3 3 6 7 6
+pop, out:   1 2 2 4 9 2 3 5 6 10 10 3 4 3 3 6 7
+result:     (CORRECT)
+
+in:         4 6 7
+push:       5
+out:        4 5 7 6
+pop, out:   5 6 7
+result:     (CORRECT)
+
+in:         {}
+push:       0
+out:        0
+pop, out:   {}
+result:     (CORRECT)
+
+
+// ---------------- TEST 2 -- HEAPSORT ---------------------- //
+
+in:         1 9 8 6 7 5 2 3 4 0 
+out:        0 1 2 3 4 5 6 7 8 9 
+result:     (CORRECT)
+
+in:         randomized vector of 1,000,000 units
+out:        sorted vector (use sort checker)
+result:     (CORRECT)
